@@ -13,6 +13,8 @@ Homebrew formulae, and tools that update themselves. `upkeep update` brings them
 version without prompts, then checks each app's code signature, its pinned Apple Team ID, and
 Gatekeeper before calling the update done.
 
+<p align="center"><img src="docs/screenshot.png" width="420" alt="Upkeep menu bar popover: six updates available, with Update and Quit &amp; update buttons per app"></p>
+
 Two parts, one repo:
 
 - **`upkeep` CLI.** One TypeScript file, zero dependencies, run directly by Node. This is the engine.
