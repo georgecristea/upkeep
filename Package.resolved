@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "macutilitykit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/georgecristea/MacUtilityKit.git",
+      "state" : {
+        "revision" : "e456427fded247a10dc552a5209cb543ea67bb2c",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}

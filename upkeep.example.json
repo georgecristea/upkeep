@@ -1,0 +1,12 @@
+{
+  "npmMinReleaseAgeHours": 24,
+  "targets": [
+    { "kind": "cask", "id": "visual-studio-code", "app": "Visual Studio Code.app", "teamId": "UBF8T346G9" },
+    { "kind": "cask", "id": "ghostty", "app": "Ghostty.app", "teamId": "24VZTF6M5V" },
+    { "kind": "cask", "id": "claude", "app": "Claude.app", "teamId": "Q6L2SF6YDW" },
+    { "kind": "npm", "id": "@openai/codex" },
+    { "kind": "formula", "id": "gh" },
+    { "kind": "native", "id": "claude-code", "version": [ "claude", "--version" ], "update": [ "claude", "update" ] },
+    { "kind": "native", "id": "oh-my-zsh", "version": [ "git", "-C", "~/.oh-my-zsh", "rev-parse", "--short", "HEAD" ], "update": [ "/bin/zsh", "~/.oh-my-zsh/tools/upgrade.sh" ] }
+  ]
+}

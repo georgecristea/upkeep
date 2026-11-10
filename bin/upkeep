@@ -1,0 +1,13 @@
+#!/bin/sh
+# Shim so `upkeep` works from anywhere. Uses Homebrew's node (Node 22.18+); override with UPKEEP_NODE.
+NODE="${UPKEEP_NODE:-}"
+if [ -z "$NODE" ]; then
+    for candidate in /opt/homebrew/bin/node /usr/local/bin/node; do
+        if [ -x "$candidate" ]; then NODE="$candidate"; break; fi
+    done
+fi
+if [ -z "$NODE" ]; then
+    echo "upkeep: Node 22.18+ not found in /opt/homebrew/bin or /usr/local/bin. Install it with 'brew install node' or set UPKEEP_NODE." >&2
+    exit 2
+fi
+exec "$NODE" "$(dirname "$(readlink -f "$0")")/../upkeep.ts" "$@"

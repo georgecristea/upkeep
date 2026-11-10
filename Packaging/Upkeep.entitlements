@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!--
+      Upkeep needs no special entitlements: it spawns the upkeep CLI (Homebrew, npm, codesign) and
+      reads its logs — neither requires a grant, and it is intentionally
+      NOT sandboxed (it must run Homebrew and npm as the user and manage a
+      LaunchAgent). This empty entitlements set is signed under the hardened runtime so the app
+      is notarizable; add keys only if a real capability is introduced.
+    -->
+</dict>
+</plist>
