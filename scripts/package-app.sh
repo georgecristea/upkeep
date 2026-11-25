@@ -13,11 +13,15 @@ RESOURCES_DIR="$CONTENTS_DIR/Resources"
 cd "$ROOT_DIR"
 
 if swift build -c release --arch arm64 --arch x86_64; then
-    BINARY_PATH="$ROOT_DIR/.build/apple/Products/Release/$APP_NAME"
+    # Ask SwiftPM: the universal output folder moved between toolchains, and a hard-coded
+    # path silently picks up a stale build.
+    BIN_DIR="$(swift build -c release --arch arm64 --arch x86_64 --show-bin-path)"
+    BINARY_PATH="$BIN_DIR/$APP_NAME"
 else
     echo "Universal build failed; falling back to host-architecture release build." >&2
     swift build -c release
-    BINARY_PATH="$ROOT_DIR/.build/release/$APP_NAME"
+    BIN_DIR="$(swift build -c release --show-bin-path)"
+    BINARY_PATH="$BIN_DIR/$APP_NAME"
 fi
 
 if [[ ! -f "$BINARY_PATH" ]]; then
