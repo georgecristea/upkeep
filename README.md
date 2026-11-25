@@ -140,6 +140,16 @@ The UI is built on [MacUtilityKit](https://github.com/georgecristea/MacUtilityKi
 [VoxKey](https://github.com/georgecristea/VoxKey) and [ClipVault](https://github.com/georgecristea/ClipVault).
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Related projects
+
+Open-source Mac utilities by the same author, built on one shared toolkit:
+
+| Project | What it is |
+|---------|------------|
+| [ClipVault](https://github.com/georgecristea/ClipVault) | Clipboard history in a bar at the bottom of the screen: ⇧⌘V, type to search, paste |
+| [VoxKey](https://github.com/georgecristea/VoxKey) | Push-to-talk dictation, transcribed on your Mac |
+| [MacUtilityKit](https://github.com/georgecristea/MacUtilityKit) | The SwiftUI + AppKit toolkit the three apps share |
+
 ## License
 
 [MIT](LICENSE) © DeepDive Solna AB. Made by [George Cristea](https://github.com/georgecristea).

@@ -21,6 +21,13 @@ swift package edit MacUtilityKit --path ../MacUtilityKit
 
 `swift package unedit MacUtilityKit` switches back to the released version.
 
+## Related projects
+
+The same author maintains [ClipVault](https://github.com/georgecristea/ClipVault),
+[VoxKey](https://github.com/georgecristea/VoxKey), [Upkeep](https://github.com/georgecristea/upkeep)
+and the toolkit they share, [MacUtilityKit](https://github.com/georgecristea/MacUtilityKit).
+Contributions to any of them are welcome.
+
 ## Licensing
 
 By contributing you agree that your contribution is licensed under this project's
